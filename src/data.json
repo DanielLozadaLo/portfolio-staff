@@ -1,0 +1,15 @@
+{
+  "nombre": "Jerson Daniel Lozada Londoño",
+  "descripcion": "Ingeniero en Software | DevOps | Cloud",
+  "sobreMi": "Soy un ingeniero apasionado por la automatización, la nube y el aprendizaje constante. Busco oportunidades como DevOps, Backend o Full Stack Developer.",
+  "habilidades": [
+    "Docker", "ECS", "CI/CD", "GitHub Actions",
+    "CloudFormation", "Serverless", "Wazuh", "SoftEther VPN",
+    "AWS", "Azure", "Linux"
+  ],
+  "contacto": {
+    "email": "llozadadaniel2006@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/daniellozada",
+    "github": "https://github.com/DanielLozadaLo"
+  }
+}

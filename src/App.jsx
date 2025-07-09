@@ -3,6 +3,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import data from './data.json';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,35 +11,37 @@ function App() {
   return (
 <div className="app">
       <header>
-        <h1>Jerson Daniel Lozada Londoño</h1>
-        <p>Ingeniero en Software | DevOps | Cloud</p>
+        <h1>{data.nombre}</h1>
+        <p>{data.descripcion}</p>
       </header>
       <main>
         <section>
           <h2>Sobre mí</h2>
-          <p>
-            Soy un ingeniero apasionado por la automatización, la nube y el aprendizaje constante. Busco oportunidades como DevOps, Backend o Full Stack Developer.
-          </p>
+          <p>{data.sobreMi}</p>
         </section>
         <section>
           <h2>Habilidades principales</h2>
           <ul>
-            <li>Docker, ECS, CI/CD, GitHub Actions</li>
-            <li>CloudFormation, Serverless, Wazuh, SoftEther VPN</li>
-            <li>AWS, Azure, Linux</li>
+            {data.habilidades.map((hab, i) => (
+              <li key={i}>{hab}</li>
+            ))}
           </ul>
         </section>
         <section>
           <h2>Contacto</h2>
           <ul>
-            <li>Email: llozadadaniel2006@gmail.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/daniellozada" target="_blank">daniellozada</a></li>
-            <li>GitHub: <a href="https://github.com/DanielLozadaLo" target="_blank">DanielLozadaLo</a></li>
+            <li>Email: {data.contacto.email}</li>
+            <li>
+              LinkedIn: <a href={data.contacto.linkedin} target="_blank">daniellozada</a>
+            </li>
+            <li>
+              GitHub: <a href={data.contacto.github} target="_blank">DanielLozadaLo</a>
+            </li>
           </ul>
         </section>
       </main>
     </div>
-  )
+  );
 }
 
 export default App
