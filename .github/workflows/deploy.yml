@@ -24,3 +24,6 @@ jobs:
 
       - name: 🏗️ Compile project
         run: npm run build
+      
+      - name: 🧪 Ejecutar pruebas
+        run: npm test
