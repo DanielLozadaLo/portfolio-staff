@@ -6,28 +6,20 @@ import './App.css'
 import data from './data.json';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-<div className="app">
+    <div className="app">
       <header>
         <h1>{data.nombre}</h1>
         <p>{data.descripcion}</p>
       </header>
-      <main>
-        <section>
+
+      <div className="grid-container">
+        <section className="card">
           <h2>Sobre mí</h2>
           <p>{data.sobreMi}</p>
         </section>
-        <section>
-          <h2>Habilidades principales</h2>
-          <ul>
-            {data.habilidades.map((hab, i) => (
-              <li key={i}>{hab}</li>
-            ))}
-          </ul>
-        </section>
-        <section>
+
+        <section className="card">
           <h2>Contacto</h2>
           <ul>
             <li>Email: {data.contacto.email}</li>
@@ -39,7 +31,16 @@ function App() {
             </li>
           </ul>
         </section>
-      </main>
+
+        <section className="card full-width">
+          <h2>Habilidades principales</h2>
+          <ul>
+            {data.habilidades.map((hab, i) => (
+              <li key={i}>{hab}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </div>
   );
 }
